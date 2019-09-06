@@ -52,7 +52,14 @@ namespace Chat {
         userSection.style.color = userData.color;
         userSection.innerHTML = `[${userData.name}]:&nbsp;`;
         let contentSection = document.createElement("span");
-        contentSection.innerHTML = content;
+
+        // [img]https://www.gstatic.com/webp/gallery/1.jpg[/img]
+        // <img src="https://www.gstatic.com/webp/gallery/1.jpg"/>
+        let replacedContent = content
+          .replace(/\[img\]/g, '<img src="')
+          .replace(/\[\/img\]/g, '"/>');
+
+        contentSection.innerHTML = replacedContent;
         wrapper.appendChild(userSection);
         wrapper.appendChild(contentSection);
 
