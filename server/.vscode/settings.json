@@ -1,3 +1,4 @@
 {
-    "abl.warnConfigFile": false
+    "abl.warnConfigFile": false,
+    "abl.checkProgressBinary": false
 }
