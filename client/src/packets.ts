@@ -17,7 +17,7 @@ namespace Chat {
     public readonly responseType: string;
 
     public constructor(public userData: UserData, public content: string) {
-      this.responseType = RequestType.CHAT_RESULT;
+      this.responseType = ResponseType.CHAT_RESULT;
     }
   }
 
